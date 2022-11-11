@@ -1,16 +1,23 @@
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
+.app {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 1.7fr 10fr;
+  row-gap: 25px;
+
+  grid-template-areas:
+    "header header"
+    "sidebar content";
+
+  max-width: ($box_width + px);
+  margin: 0 auto;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
 
-.react :hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+
+
+
+
 
 @keyframes logo-spin {
   from {
@@ -19,27 +26,5 @@
 
   to {
     transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.block {
-  width: 1000px;
-}
-
-.card {
-  padding: 2em;
-}
-
-.docs {
-  color: #888;
-
-  @media screen and (max-width:($md2 + px)) {
-    color: green;
   }
 }
