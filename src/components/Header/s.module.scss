@@ -6,4 +6,8 @@
   left: 0;
   right: 0;
   height: 60px;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #111;
+  }
 }

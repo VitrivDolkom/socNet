@@ -1,0 +1,14 @@
+.item {
+  margin: 5px 0;
+  border-radius: 10px;
+  padding: 5px;
+  padding-left: 10px;
+  cursor: pointer;
+  transition: all .3s linear;
+
+  &:hover,
+  &.active {
+    background-color: grey;
+    color: white;
+  }
+}
