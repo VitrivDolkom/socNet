@@ -1,10 +1,11 @@
+import Links from "../Links/Links";
 import s from "./s.module.scss";
 
 
 const Sidebar = () => {
     return (
         <div className={s.sidebar}>
-            sidebar
+            <Links />
         </div>
     );
 }
