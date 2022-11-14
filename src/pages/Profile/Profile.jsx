@@ -4,7 +4,7 @@ import s from "./s.module.scss";
 
 const Profile = () => {
     return (
-        <div className={`${s.profile} section`}>
+        <div className={`${s.profile} `}>
             <Posts />
         </div>
     );

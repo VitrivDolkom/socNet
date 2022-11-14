@@ -5,7 +5,10 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Content from "./components/Content/Content";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Profile from "./pages/Profile/Profile";
-import Message from "./pages/Message/Message";
+import Messenger from "./pages/Messenger/Messenger";
+import Music from "./pages/Music/Music";
+import Settings from "./pages/Settings/Settings";
+import News from "./pages/News/News";
 
 
 function App() {
@@ -13,11 +16,16 @@ function App() {
         <div className={s.app}>
             <Header />
             <Sidebar />
-            <Routes>
-                <Route path="/" element={<Content />} />
-                <Route path="/Profile" element={<Profile />} />
-                <Route path="/Message" element={<Message />} />
-            </Routes>
+            <div className={s.appContent}>
+                <Routes>
+                    <Route path="/" element={<Content />} />
+                    <Route path="/Profile" element={<Profile />} />
+                    <Route path="/Messenger" element={<Messenger />} />
+                    <Route path="/Music" element={<Music />} />
+                    <Route path="/Settings" element={<Settings />} />
+                    <Route path="/News" element={<News />} />
+                </Routes>
+            </div>
         </div >
     )
 }
