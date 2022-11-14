@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import ToPages from "../ToPages/ToPages";
 import s from "./s.module.scss";
 
-const sideBarLinks = ["Profile", "Message", "Blog", "Users", "Feed", "Friends"];
+const sideBarLinks = ["Profile", "Messenger", "News", "Music", "Settings"];
 
 
 const Links = () => {
