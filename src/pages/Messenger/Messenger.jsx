@@ -1,14 +1,10 @@
+import UsersMessage from "@/components/UsersMessage/UsersMessage";
 import s from "./s.module.scss";
 
 const Messenger = () => {
     return (
         <div className={`${s.wrap} `}>
-            <ul className={`${s.userList}`}>
-                <li>Dima</li>
-                <li>Andrey</li>
-                <li>Vika</li>
-                <li>Kirill</li>
-            </ul>
+            <UsersMessage />
             <div className={`${s.dialog}`}>
                 Hi
                 How are you?
