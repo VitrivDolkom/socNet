@@ -5,10 +5,6 @@ const Messenger = () => {
     return (
         <div className={`${s.wrap} `}>
             <UsersMessage />
-            <div className={`${s.dialog}`}>
-                Hi
-                How are you?
-            </div>
         </div>
     );
 }

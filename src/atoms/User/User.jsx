@@ -1,10 +1,11 @@
 import s from "./s.module.scss";
 
-const User = ({ currentDialog, changeDialog, name }) => {
+const User = ({ changeDialog, name }) => {
+
     return (
         <li
-            className={`${s.item} ${currentDialog === name ? s.active : ""}`}
-            onClick={() => changeDialog()}>{name}</li>
+            className={`${s.item}`}
+            onClick={() => changeDialog(name)}>{name}</li>
     );
 }
 

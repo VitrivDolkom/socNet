@@ -22,7 +22,7 @@ function App() {
                     <Route path="/" element={<Content />} />
                     <Route path="/Profile" element={<Profile />} />
                     <Route exact path="/Messenger" element={<Messenger />} />
-                    <Route path="/Messenger/:UserId" element={<Dialog />} />
+                    <Route path="/Messenger/*" element={<Dialog />} />
                     <Route path="/Music" element={<Music />} />
                     <Route path="/Settings" element={<Settings />} />
                     <Route path="/News" element={<News />} />

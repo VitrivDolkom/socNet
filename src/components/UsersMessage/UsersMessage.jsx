@@ -7,20 +7,22 @@ const dialogs = ["Dima", "Andrey", "Vika", "Sasha"];
 
 const UsersMessage = () => {
     const navigate = useNavigate();
-    const [dialog, setDialog] = useState("Dima");
+    const [dialog, setDialog] = useState();
 
     const routeToDialog = (name) => {
-        setDialog(name);
+
         navigate(`/Messenger/${name}`);
     }
+
     return (
         <ul className={`${s.userList}`}>
             {
                 dialogs.map((name, index) => {
-                    return (<User key={index}
+                    return (<User
+                        key={index}
                         name={name}
                         changeDialog={() => routeToDialog(name)}
-                        currentDialog={dialog} />);
+                    />);
                 })
             }
 
