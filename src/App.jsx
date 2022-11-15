@@ -9,6 +9,7 @@ import Messenger from "./pages/Messenger/Messenger";
 import Music from "./pages/Music/Music";
 import Settings from "./pages/Settings/Settings";
 import News from "./pages/News/News";
+import Dialog from "./pages/Dialog/Dialog";
 
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Content />} />
                     <Route path="/Profile" element={<Profile />} />
-                    <Route path="/Messenger" element={<Messenger />} />
+                    <Route exact path="/Messenger" element={<Messenger />} />
+                    <Route path="/Messenger/*" element={<Dialog />} />
                     <Route path="/Music" element={<Music />} />
                     <Route path="/Settings" element={<Settings />} />
                     <Route path="/News" element={<News />} />
