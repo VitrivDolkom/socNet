@@ -1,3 +1,30 @@
+.wrap {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "ava about about"
+    "post post addPost";
+}
+
+.post {
+  grid-area: post;
+  padding: 10px;
+}
+
+.about {
+  padding-top: 20px;
+  grid-area: about;
+  text-align: center;
+}
+
+.addPost {
+  grid-area: addPost;
+  width: 100px;
+  height: 40px;
+}
+
 .avatar {
+  grid-area: ava;
   width: 80px;
 }
