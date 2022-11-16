@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import ToDialog from "../ToDialog/ToDialog";
+import ToPage from "../ToPage/ToPage";
 import s from "./s.module.scss";
 
 const sideBarLinks = ["Profile", "Messenger", "News", "Music", "Settings"];
@@ -19,7 +19,7 @@ const Links = () => {
         <ul className={s.list}>
             {sideBarLinks.map((title, i) => {
                 return (
-                    <ToDialog
+                    <ToPage
                         key={i}
                         title={title}
                         changePage={() => routeToPage(title)}

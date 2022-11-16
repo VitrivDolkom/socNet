@@ -1,6 +1,6 @@
 import s from "./s.module.scss";
 
-const User = ({ changeDialog, name }) => {
+const ToDialog = ({ changeDialog, name }) => {
 
     return (
         <li
@@ -9,4 +9,4 @@ const User = ({ changeDialog, name }) => {
     );
 }
 
-export default User;
+export default ToDialog;
