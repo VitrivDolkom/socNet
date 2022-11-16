@@ -1,0 +1,25 @@
+.item {
+  margin: 5px 0;
+  border-radius: 10px;
+  padding: 10px;
+  padding-left: 10px;
+  cursor: pointer;
+  transition: all .3s linear;
+  color: $grey;
+
+  &:hover,
+  &.active {
+    background-color: $lightOrange;
+    color: $black;
+  }
+
+  @media (prefers-color-scheme: dark) {
+
+
+    &:hover,
+    &.active {
+      background-color: $grey;
+      color: $white;
+    }
+  }
+}

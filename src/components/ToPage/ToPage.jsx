@@ -1,7 +1,7 @@
 import s from "./s.module.scss";
 
 
-const ToDialog = ({ title, changePage, page }) => {
+const ToPage = ({ title, changePage, page }) => {
     return (
         <li onClick={() => changePage()}
             className={page === title ? `${s.item} ${s.active}` : `${s.item}`}
@@ -9,4 +9,4 @@ const ToDialog = ({ title, changePage, page }) => {
     );
 }
 
-export default ToDialog;
+export default ToPage;
