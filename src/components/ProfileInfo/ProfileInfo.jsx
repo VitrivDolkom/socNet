@@ -8,24 +8,24 @@ const ProfileInfo = () => {
     const { setPostsList } = useContext(PostsContext);
 
     const addNewPost = () => {
-        if (!postText) {
-            alert("It is forbidden to send empty post");
+        if (postText.toLowerCase() === postText.toUpperCase()) {
+            alert("It`s forbidden to send empty post");
             return;
         }
         setPostsList(prev => [...prev, postText]);
-        console.log(postText);
         setPostText("");
     }
     return (
-        <div>
+        <div className={s.wrap}>
             <img className={s.avatar}
                 src="https://avatars.mds.yandex.net/i?id=306c1349695df0754814e2d921ef4f17-5235884-images-thumbs&n=13&exp=1" alt="avatar" />
+            <div className={s.about}>I`m Andrey ...</div>
             <textarea
-                placeholder="Hello, today I..."
+                className={s.post} placeholder="Hello, today I..."
                 value={postText}
                 onChange={(e) => setPostText(e.target.value)}
                 cols="30" rows="4"></textarea>
-            <button onClick={() => addNewPost()}>New post</button>
+            <button className={s.addPost} onClick={() => addNewPost()}>New post</button>
         </div >
     );
 }
