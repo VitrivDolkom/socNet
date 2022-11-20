@@ -12,7 +12,8 @@ import News from "./pages/News/News";
 import Dialog from "./pages/Dialog/Dialog";
 
 
-function App({ allMessages, usersDialog }) {
+function App({ State }) {
+    // debugger;
     return (
         <div className={s.app}>
             <Header />
@@ -20,9 +21,9 @@ function App({ allMessages, usersDialog }) {
             <div className={s.appContent}>
                 <Routes>
                     <Route path="/" element={<Content />} />
-                    <Route path="/Profile" element={<Profile />} />
-                    <Route exact path="/Messenger" element={<Messenger usersDialog={usersDialog} />} />
-                    <Route path="/Messenger/*" element={<Dialog allMessages={allMessages} />} />
+                    <Route path="/Profile" element={<Profile userPosts={State.userPosts} />} />
+                    <Route exact path="/Messenger" element={<Messenger usersDialog={State.usersDialog} />} />
+                    <Route path="/Messenger/*" element={<Dialog allMessages={State.allMessages} />} />
                     <Route path="/Music" element={<Music />} />
                     <Route path="/Settings" element={<Settings />} />
                     <Route path="/News" element={<News />} />
