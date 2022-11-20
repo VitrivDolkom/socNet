@@ -8,12 +8,11 @@ const ProfileInfo = () => {
     const { setPostsList } = useContext(PostsContext);
 
     const addNewPost = () => {
-        if (!postText) {
-            alert("It is forbidden to send empty post");
+        if (postText.toLowerCase() === postText.toUpperCase()) {
+            alert("It`s forbidden to send empty post");
             return;
         }
         setPostsList(prev => [...prev, postText]);
-        console.log(postText);
         setPostText("");
     }
     return (
