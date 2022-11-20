@@ -13,18 +13,12 @@
   margin: 0 auto;
 }
 
+.app-content {
+  grid-area: content;
+  background-color: $lightOrange;
+  text-align: center;
 
-
-
-
-
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
+  @media (prefers-color-scheme: dark) {
+    background-color: #333;
   }
 }

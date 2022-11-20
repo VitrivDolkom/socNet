@@ -1,9 +1,19 @@
 .header {
   grid-area: header;
-  background-color: antiquewhite;
+  background-color: $lightOrange;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: 60px;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #111;
+  }
+}
+
+.logo {
+  cursor: pointer;
+  margin-left: 300px;
+  width: 60px;
 }
